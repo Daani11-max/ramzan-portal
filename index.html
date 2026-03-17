@@ -8,65 +8,67 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
 
 <style>
+/* Body */
 body {
   margin:0;
   padding:0;
   font-family:'Noto Nastaliq Urdu', serif;
-  background: linear-gradient(#0f5132, #14532d);
-  color:white;
+  background: #e6f2e6; /* light green for clean gov portal look */
+  color: #064e3b;
   text-align:center;
   min-height:100vh;
-  background-image: url('https://i.ibb.co/3RYzM1M/mosque.png'); /* working mosque image */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
+/* Header */
 .header {
   background: #064e3b;
-  padding: 25px 0;
+  padding: 20px 0;
   font-size: 42px;
   font-weight: bold;
-  border-bottom: 4px solid gold;
   color: gold;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  border-bottom: 4px solid #198754;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
+/* Main Card */
 .box {
-  background: rgba(255,255,255,0.95);
+  background: white;
   color: #064e3b;
   width: 90%;
   max-width: 450px;
   margin: 60px auto;
-  padding: 40px;
-  border-radius: 15px;
-  box-shadow: 0 0 25px rgba(0,0,0,0.4);
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
 
+/* Title */
 .title {
-  font-size: 28px;
+  font-size: 26px;
   font-weight: bold;
   margin-bottom: 25px;
   color: #064e3b;
 }
 
+/* Input */
 input {
   width: 80%;
   padding: 12px;
   font-size: 18px;
-  border-radius: 8px;
+  border-radius: 6px;
   border: 1px solid #ccc;
-  text-align: center;
+  text-align:center;
   margin-bottom: 15px;
 }
 
+/* Button */
 button {
   padding: 12px 30px;
   font-size: 18px;
   background: #198754;
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 6px;
   cursor: pointer;
   font-weight: bold;
   transition: 0.3s;
@@ -76,32 +78,18 @@ button:hover {
   background: #157347;
 }
 
+/* Result */
 #result {
-  margin-top: 25px;
-  font-size: 22px;
+  margin-top: 20px;
+  font-size: 20px;
   font-weight: bold;
 }
 
+/* Footer */
 .footer {
-  margin-top: 60px;
-  font-size: 18px;
-  color: #f0f0f0;
-}
-
-/* Lantern Decorations */
-.lantern {
-  position: absolute;
-  width: 60px;
-  top: 10px;
-  animation: float 3s infinite alternate;
-}
-
-.lantern-left { left: 20px; }
-.lantern-right { right: 20px; }
-
-@keyframes float {
-  0% { transform: translateY(0px); }
-  100% { transform: translateY(15px); }
+  margin-top: 50px;
+  font-size: 16px;
+  color: #064e3b;
 }
 
 @media(max-width:500px){
@@ -109,7 +97,7 @@ button:hover {
   .box{ padding:25px; }
   input{ width:90%; font-size:16px;}
   button{ font-size:16px; padding:10px 20px; }
-  #result{ font-size:20px; }
+  #result{ font-size:18px; }
 }
 </style>
 </head>
@@ -117,10 +105,6 @@ button:hover {
 <body>
 
 <div class="header">ضلع ہری پور</div>
-
-<!-- Lanterns -->
-<img src="https://i.ibb.co/D9yZf4r/lantern.png" class="lantern lantern-left">
-<img src="https://i.ibb.co/D9yZf4r/lantern.png" class="lantern lantern-right">
 
 <div class="box">
   <div class="title">رمضان پیکیج اہلیت چیک کریں</div>
@@ -130,7 +114,7 @@ button:hover {
   <div id="result"></div>
 </div>
 
-<div class="footer">رمضان المبارک 🌙</div>
+<div class="footer">© ضلع ہری پور | رمضان المبارک</div>
 
 <script>
 function check() {
