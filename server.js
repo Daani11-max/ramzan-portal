@@ -15,7 +15,7 @@ app.post("/check", (req, res) => {
     const found = data.find(person => person.cnic === cnic);
 
     if(found){
-        res.json({message:"آپ رمضان پیکیج کے لیے اہل ہیں۔ آپ اپنے قریبی جاز کیش سینٹر جا کر اپنی رقم حاصل کریں۔"});
+        res.json({message:"آپ رمضان پیکیج کے لیے اہل ہیں۔ اپنے قریبی جاز کیش سینٹر جا کر اپنی رقم حاصل کریں۔"});
     }else{
         res.json({message:"آپ رمضان پیکیج کے لیے اہل نہیں ہیں"});
     }
